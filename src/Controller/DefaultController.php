@@ -49,11 +49,9 @@ class DefaultController extends AbstractController
     public function indexAction(Request $request, TCPDFController $tcpdf){
 
         $html = $this->renderView('Admin/pdf.html.twig', array(
-            'p1' => 14,
-            'p2' => 86,
+            //'p1' => 14, //percentage for stacked bar
+            //'p2' => 86,
         ));
-
-
 
         $filename = md5(uniqid());
         $filneNL = $filename.".pdf";
@@ -65,7 +63,12 @@ class DefaultController extends AbstractController
     }
 
 
-
+    /*
+     *  returns file name and outputs the pdf file
+     *  @param renderView $html the render view of the image and the pharagraph
+     *  @param TCPDFController $tcpdf
+     *  @param String $fileNL the file name
+     */
     public function returnPDFResponseFromHTML($html, $tcpdf, $fileNL){
 
         //var_dump($fileNL);die;
@@ -85,7 +88,7 @@ class DefaultController extends AbstractController
 
         $pages = 1;
 
-        while($pages <= 3){
+        while($pages <= 3){//iterate to output 3 pages
 
 
             // remove default header/footer
@@ -195,7 +198,9 @@ class DefaultController extends AbstractController
         $pdf->Output($fileNL.".pdf",'I'); // This will output the PDF as a response directly
         //die;
         //$pdf->Output($filename.".pdf",'D');//D FOR DOWNLOAD
-        //$pdf->Output($fileNL, 'F');//SAVE FILE TO DISK
+
+        //$pdf->Output($fileNL, 'F');//this can be used to SAVE FILE TO DISK
+        //we can specify a custom folder to save the pdf
 
         return $fileNL;
 
