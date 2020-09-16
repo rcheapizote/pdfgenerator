@@ -6,9 +6,3 @@
 backend_admin_homepage:
   path:     /
   controller: App\Controller\DefaultController::indexAction
-
-
-
-backend_admin_gauge:
-  path:     /gauge
-  controller: App\Controller\DefaultController::gaugeAction

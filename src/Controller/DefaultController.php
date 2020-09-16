@@ -82,107 +82,125 @@ class DefaultController extends AbstractController
         $pdf->SetTitle(('pdfgenerator'));
         //$pdf->SetMargins(20,20,40, true);
 
-        // remove default header/footer
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
 
-        $pdf->AddPage();
-        $pdf->writeHTML($html, true, false, false, false, '');
+        $pages = 1;
 
-        // set font
-        $pdf->SetFont('helvetica', '', 12);
-
-        $yOffset = 20;//1inch*2
-        //CIRCLE GAUGE
-        $style5 = array('width' => 4, 'cap' => 'butt', 'join' => 'round', 'dash' => 0, 'color' => array(188, 19, 119));
-
-        $pdf->Text(30, 70+$yOffset, '100%');
-        $pdf->SetLineStyle($style5);
-        $pdf->Circle(35,75+$yOffset,15);//x,y,size //100%
-
-        $pdf->Text(30, 110+$yOffset, '86%');
-        $pdf->SetLineStyle($style5);
-        $pdf->Circle(35, 115+$yOffset, 15, 160, 90); //86%
+        while($pages <= 3){
 
 
-        //PIE CHART
-        $xc = 35;//x
-        $yc = 180+$yOffset;//y
-        $r = 25;//size
+            // remove default header/footer
+            $pdf->setPrintHeader(false);
+            $pdf->setPrintFooter(false);
 
-        $style5 = array('width' => 0.50, 'cap' => 'butt', 'join' => 'round', 'dash' => 0, 'color' => array(255, 255, 255));
-        $pdf->SetLineStyle($style5);
+            $pdf->AddPage();
+            $pdf->writeHTML($html, true, false, false, false, '');
 
-        $pdf->SetFillColor(19, 147, 19);//dark green//Humana discounts
-        $pdf->PieSector($xc, $yc, $r, 0, 88, 'FD', false, 0, 2);
-
-        $pdf->SetFillColor(188, 19, 119);//Your Share');//26%
-        $pdf->PieSector($xc, $yc, $r, 88, 180, 'FD', false, 0, 2);
-
-        $pdf->SetFillColor(142, 188, 19);//Amount Humana paid
-        $pdf->PieSector($xc, $yc, $r, 180, 0, 'FD', false, 0, 2);
+            // set font
+            $pdf->SetFont('helvetica', '', 18);
 
 
-        $humanaOffset = $yOffset+5;
-        $pdf->SetTextColor(19, 147, 19);
-        $pdf->Text(65, 160+$humanaOffset, 'Humana discounts');//24%
+            $yOffset = 20;//1inch*2
+            //CIRCLE GAUGE
+            $style5 = array('width' => 4, 'cap' => 'butt', 'join' => 'round', 'dash' => 0, 'color' => array(188, 19, 119));
 
-        $pdf->SetTextColor(142, 188, 19);
-        $pdf->Text(65, 170+$humanaOffset, 'Amount Humana paid');//50%
+            $pdf->Text(26, 70+$yOffset, '100%');
+            $pdf->SetLineStyle($style5);
+            $pdf->Circle(35,75+$yOffset,15);//x,y,size //100%
 
-        $pdf->SetTextColor(0);
-        $pdf->Text(65, 180+$humanaOffset, 'Medicare subsidy');
-
-        $pdf->SetTextColor(188, 19, 119);
-        $pdf->Text(65, 190+$humanaOffset, 'Your Share');//26%
-
-
-        //STACKED BAR
-        $xc=15;
-        $yc=250;
-
-        $pdf->SetLineStyle(array('width' => 5, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
-
-        $pdf->SetDrawColor(188, 19, 119);
-        $pdf->Line($xc, $yc, $xc+14, $yc);
-        $pdf->SetDrawColor(142, 188, 19);
-        $pdf->Line($xc+14, $yc, $xc+86, $yc);
-        //$pdf->Line($xc, $yc-50, $xc, $yc+50);
+            $pdf->Text(28, 110+$yOffset, '86%');
+            $pdf->SetLineStyle($style5);
+            $pdf->Circle(35, 115+$yOffset, 15, 160, 90); //86%
 
 
-        $pdf->SetTextColor(0);
-        $pdf->Text(10, 235, "MEDICAL HOSPITAL AND PART B PHARMACY ");
-        $pdf->Text(10, 240, "COMBINED ANNUAL PLAN DEDUCTIBLE");
+            //PIE CHART
+            $xc = 35;//x
+            $yc = 180+$yOffset;//y
+            $r = 25;//size
 
-        $pdf->Text(15, 255, "0");
-        $pdf->Text(87, 255, "$1500");
+            $pdf->SetFont('helvetica', '', 11);
+
+            $style5 = array('width' => 0.50, 'cap' => 'butt', 'join' => 'round', 'dash' => 0, 'color' => array(255, 255, 255));
+            $pdf->SetLineStyle($style5);
+
+            $pdf->SetFillColor(19, 147, 19);//dark green//Humana discounts
+            $pdf->PieSector($xc, $yc, $r, 0, 88, 'FD', false, 0, 2);
+
+            $pdf->SetFillColor(188, 19, 119);//Your Share');//26%
+            $pdf->PieSector($xc, $yc, $r, 88, 180, 'FD', false, 0, 2);
+
+            $pdf->SetFillColor(142, 188, 19);//Amount Humana paid
+            $pdf->PieSector($xc, $yc, $r, 180, 0, 'FD', false, 0, 2);
 
 
-        $pdf->SetTextColor(0);
-        $pdf->Text(10, 260, "Your combined Annual  Plan Deductible  is");
-        $pdf->SetTextColor(142, 188, 19);
-        $pdf->Text(92, 260, "$1500");
-        $pdf->SetTextColor(0);
-        $pdf->Text(10, 265, "You have paid");
-        $pdf->SetTextColor(188, 19, 119);
-        $pdf->Text(40, 265, "$209.99");
-        $pdf->SetTextColor(0);
-        $pdf->Text(57, 265, "towards your deductible");
+            $humanaOffset = $yOffset+5;
+
+            $pdf->SetFont('helvetica', 'U', 11);
+            $pdf->SetTextColor(0);
+            $pdf->Text(65, 150+$humanaOffset, 'Average retail price');//24%
+
+
+            $pdf->SetFont('helvetica', '', 11);
+            $pdf->SetTextColor(19, 147, 19);
+            $pdf->Text(65, 160+$humanaOffset, 'Humana discounts');//24%
+
+            $pdf->SetTextColor(142, 188, 19);
+            $pdf->Text(65, 170+$humanaOffset, 'Amount Humana paid');//50%
+
+            $pdf->SetTextColor(0);
+            $pdf->Text(65, 180+$humanaOffset, 'Medicare subsidy');
+
+            $pdf->SetTextColor(188, 19, 119);
+            $pdf->Text(65, 190+$humanaOffset, 'Your Share');//26%
+
+
+            //STACKED BAR
+            $xc=15;
+            $yc=250;
+
+            $pdf->SetFont('helvetica', '', 12);
+
+            $pdf->SetLineStyle(array('width' => 5, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
+
+            $pdf->SetDrawColor(188, 19, 119);
+            $pdf->Line($xc, $yc, $xc+14, $yc);
+            $pdf->SetDrawColor(142, 188, 19);
+            $pdf->Line($xc+14, $yc, $xc+86, $yc);
+            //$pdf->Line($xc, $yc-50, $xc, $yc+50);
+
+
+            $pdf->SetTextColor(0);
+            $pdf->Text(10, 235, "MEDICAL HOSPITAL AND PART B PHARMACY ");
+            $pdf->Text(10, 240, "COMBINED ANNUAL PLAN DEDUCTIBLE");
+
+            $pdf->Text(15, 255, "0");
+            $pdf->Text(87, 255, "$1500");
+
+
+            $pdf->SetTextColor(0);
+            $pdf->Text(10, 260, "Your combined Annual  Plan Deductible  is");
+            $pdf->SetTextColor(142, 188, 19);
+            $pdf->Text(92, 260, "$1500");
+            $pdf->SetTextColor(0);
+            $pdf->Text(10, 265, "You have paid");
+            $pdf->SetTextColor(188, 19, 119);
+            $pdf->Text(40, 265, "$209.99");
+            $pdf->SetTextColor(0);
+            $pdf->Text(57, 265, "towards your deductible");
+
+            $pages++;
+
+        }
 
 
         $pdf->Output($fileNL.".pdf",'I'); // This will output the PDF as a response directly
         //die;
         //$pdf->Output($filename.".pdf",'D');//D FOR DOWNLOAD
-        //$pdf->Output($fileNL, 'F');//SAVE TO DISK
+        //$pdf->Output($fileNL, 'F');//SAVE FILE TO DISK
 
         return $fileNL;
 
     }
 
-    public function  gaugeAction(Request $request){
-
-        return $this->render('Admin/gauge.html.twig', array());
-    }
 
 
 
