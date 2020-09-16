@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="fixed">
+    <head>
+
+        <!-- Basic -->
+
+        {% block metas %}
+            <meta charset="UTF-8">
+            <meta name="keywords" content="HTML5 Admin Template" />
+            <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+            <meta name="author" content="rchea">
+
+            <!-- Mobile Metas -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {% endblock %}
+
+
+        <title>
+            {% set _block_title = block('title') %}
+            {% if _block_title is not empty %}
+                {% block title %}{% endblock %}
+            {% endif %}
+        </title>
+        {% block stylesheets %}
+            <!-- Web Fonts  -->
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+            {#{{ encore_entry_link_tags('app') }}#}
+
+            <link rel="stylesheet" href="{{ asset('build/css/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/bootstrap-colorpicker.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/bootstrap-datepicker3.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/custom.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/default.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/jquery-ui.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/jquery-ui.theme.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/magnific-popup.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/theme.css') }}">
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('js/app') }}
+            {{ encore_entry_script_tags('js/jquery') }}
+
+            {#<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha256-ffw+9zwShMev88XNrDgS0hLIuJkDfXhgyLogod77mn8=" crossorigin="anonymous"></script>#}
+            {{ encore_entry_script_tags('js/jquery.browser.mobile') }}
+            {{ encore_entry_script_tags('js/popper.min') }}
+            {{ encore_entry_script_tags('js/bootstrap') }}
+            {{ encore_entry_script_tags('js/bootstrap-datepicker') }}
+            {{ encore_entry_script_tags('js/common') }}
+            {{ encore_entry_script_tags('js/nanoscroller') }}
+            {{ encore_entry_script_tags('js/jquery.magnific-popup') }}
+            {{ encore_entry_script_tags('js/jquery.placeholder') }}
+            {{ encore_entry_script_tags('js/jquery-ui') }}
+            {{ encore_entry_script_tags('js/jquery.ui.touch-punch') }}
+            {{ encore_entry_script_tags('js/modernizr') }}
+
+            {#{{ encore_entry_script_tags('snap.svg-min') }}#}
+            {{ encore_entry_script_tags('js/theme') }}
+            {{ encore_entry_script_tags('js/custom') }}
+            {{ encore_entry_script_tags('js/theme.init') }}
+
+        {% endblock %}
+
+
+        <!-- Head Libs -->
+        {#<script src="{{ asset('css/portoadmin/vendor/modernizr/modernizr.js') }}"></script>#}
+
+    </head>
+    <body>
+        {% block body %}
+
+
+
+        {% endblock %}
+
+    </body>
+</html>

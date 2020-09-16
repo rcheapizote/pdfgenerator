@@ -1,0 +1,199 @@
+label_request_auth_title: 'SOLICITUD PARA INGRESO DATOS'
+label_request_auth_body: 'Estimado Operador, para el ingreso de datos de corridas anteriores usted podrá hacerlo con la presente solicitud; seleccione la fecha y el turno de la corrida, su solicitud será enviada y podrá ver en notificaciones cuando sea autorizada.'
+label_report_pdf_msg: Reporte Laboratorio
+label_send_report: Enviar reporte
+label_finish: Finalizar
+label_finish_title: Confirmación envío de reporte
+label_finish_body: Estimado operador, usted confirma que completado e ingresado los datos correctos para la presente corrida de análisis, los datos no podrán ser modificados sin previa autorización, el reporte será enviado a los destinatarios para el control y seguimiento.
+label_clear: Limpiar
+label_goback: Regresar
+label_equipment_draw: Control Fosfato - pH
+label_shortname: Nombre corto
+label_group: Grupo
+label_comment: Comentario
+label_result: Resultado
+label_data: Datos
+label_operator: Operador
+label_date_from: Desde
+label_date_to: Hasta
+label_print: Imprimir
+label_auth: Autorizar
+label_reject: Rechazar
+label_auth_past_data: Autorizar ingreso de data anterior
+label_calculate: Calcular
+label_no_active_shift: No existe turno activo
+label_accept: Aceptar
+label_equation: Ecuación
+label_add: Agregar
+label_options: Opciones
+label_data_type: Tipo de dato
+label_report_print: Imprimir en reporte
+label_min_value: Valor mínimo
+label_max_value: Valor Máximo
+label_variable: Variable
+label_duplicate: Duplicar
+label_measurement_unit: Unidad de Medida
+label_section: Equipo
+label_description: Descripción
+label_donot_set_password: La contraseña será generada por el sistema
+label_alert:
+  success: "Listo"
+  info: "Info"
+  danger: "Error"
+  warning: "Alerta"
+label_assigned: Asignado
+label_id: ID
+label_assign: Asignar
+label_plant: Planta
+label_remember_me: Recuerdame
+label_hello: 'Hola'
+label_greetins: 'Saludos.'
+label_welcome: 'Bienvenido a Laboratorio de Aguas'
+seconds_ago: ' segundos atrás'
+one_minute_ago: ' hace un minuto'
+minutes_ago: ' minutos atrás'
+an_hour_ago: ' hace una hora'
+hours_ago: ' horas atrás'
+yesterday: ' Ayer'
+days_ago: ' días atrás'
+a_week_ago: ' una semana atrás'
+weeks_ago: ' semanas atrás'
+a_month_ago: ' un mes atrás'
+months_ago: ' meses atrás'
+one_year_ago: ' un año atrás'
+years_ago: ' años atrás'
+label_years: años
+label_months: meses
+label_hours: horas
+label_access_denied: 'Acceso Denegado'
+label_user_id: 'Usuario ID'
+label_export_excel: 'Exportar a Excel'
+label_exit_impersonation: 'Salir de impersonar'
+label_impersonate: Impersonar
+label_all: Todos
+label_pending: Pendiente
+label_rejected: Rechazado
+label_detail: Detalle
+label_download_template: 'Descargar formato'
+label_select_csv: 'Seleccionar archivo CSV'
+label_load: Cargar
+label_sent: Enviado
+label_total: Total
+label_expires: Expira
+label_update: Actualizar
+label_log: Log
+label_notifications: Notificaciones
+label_updated_at: Modificado
+label_updated_by: 'Modificado por'
+label_discount: Descuento
+label_time: Hora
+label_amount: Cantidad
+label_close: Cerrar
+label_requested: Solicitado
+label_approved: Aprobado
+label_already_exists: 'ya existente'
+label_create_new: Crear
+label_new: Nuevo
+label_edit: Editar
+label_list: Listado
+label_cancel: Cancelar
+label_save: Guardar
+label_delete: Eliminar
+label_form: Formulario
+label_actions: Acciones
+label_status: Estado
+label_back: Regresar
+label_dates: Fechas
+label_calendar: Calendario
+label_yes: Si
+label_no: 'No'
+label_ok: Ok
+label_are_you_sure: 'Está seguro?'
+label_no_more_files: 'No es posible subir más archivos'
+label_max_files: 'archivos máximo'
+label_photo: Fotos
+label_flash_save_success_msg: 'Cambios guardados'
+label_flash_success: Listo
+label_flash_warning: Advertencia
+label_flash_info: Info
+label_flash_danger: Peligro
+label_flash_save_warning_msg: 'Cambios no guardados, intenta de nuevo'
+label_flash_delete_msg: 'No es posible borrar'
+label_mail_taken: 'El correo ya existe en el sistema'
+label_username_taken: 'El usuario ya existe en el sistema'
+label_name: Nombre
+label_short_name: Abreviatura
+label_code: Código
+label_last_name: Apellido
+label_enabled: Habilitado
+label_step: Paso
+label_type: Tipo
+label_login_forgot_password: 'Olvidé mi contraseña'
+label_set_password: 'Dejar en blanco para no cambiar la contraseña'
+label_login_keep_active: 'Mantenerme activo'
+label_login_login: INGRESAR
+label_login_restore_pass: 'Restaurar contraseña'
+label_login_dont_have_pass: '¿No tienes una cuenta?'
+label_login_have_account: 'Ya tengo una cuenta'
+label_user: Usuario
+label_users: Usuarios
+label_username: Usuario
+label_email: Correo
+label_birthdate: 'Fecha de nacimiento'
+label_login_password: Contraseña
+label_login_password_retype: 'Repetir Contraseña'
+label_shift: Turno
+label_roles: Roles
+label_role: Rol
+label_select: Selecccionar
+label_menu:
+  home: Inicio
+  config: Configuración
+  permissions: Permisos
+  users: Usuarios
+  roles: Roles
+  admin: Admin
+  profile: Perfil
+  logout: Salir
+  shift: Turnos
+  plant: Plantas
+  section: Equipos
+  section_group: Grupos de equipos
+  variable: Variables
+  user_notification: Notificaciones
+  mailing_group: Grupo de Correos
+  measurement_unit: Unidades de Medida
+  laboratory: Laboratorio
+  report: Reportes
+  report_rawdata: Data cruda
+  report_variablegraph: Gráfica de variables
+
+resetting:
+  title: 'Reiniciar Contraseña'
+  message: 'Al presionar el siguiente link se direccionará a la página para ingresar su nueva contraseña'
+
+error:
+  page_not_found: 'página no encontrada'
+  access_denied: 'Acceso denegado'
+  contact_admin: 'contacta al administrador del sitio'
+mail:
+  email_sent: Correo enviado
+  email_sent_msg: 'Ha sido enviado un correo que contiene un enlace para re establecer tu contraseña. Este mismo enlace expirará en %tokenlife% hora(s).'
+  email_retry: 'Si no recibes el correo, por favor chequea tu bandeja spam o prueba de nuevo'
+  label_password: 'Contraseña: '
+  reset_link: 'Para restablecer tu contraseña, por favor hacer click'
+  link_expiration: Este enlace expirará en %tokenlife% hora(s)..
+  restore_password: Restablecer contraseña
+  reset_password: Reinicia tu contraseña
+  insert_email_reset: Ingresa tu correo y recibiras un enlace para reiniciar tu contraseña
+  send_reset_email: Enviar correo de reinicio
+dashboard:
+  approved: Aprobadas
+  rejected: Rechazadas
+  managers: Adminstradores
+  operators: Operadores
+tooltip:
+  edit: Editar
+  delete: Borrar
+
+

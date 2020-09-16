@@ -1,0 +1,28 @@
+backend_admin_report_rawdata:
+  path:     /rawdata
+  controller: App\Controller\ReportController::rawDataAction
+
+rawdata_list_datatables:
+  path: /guide/list/datatables
+  controller: App\Controller\ReportController::rawDataDataTablesAction
+
+backend_admin_report_labpdf:
+  path:     /{measureHeader}/labpdf
+  controller: App\Controller\ReportController::labpdfAction
+
+backend_admin_report_variablegraph:
+  path:     /variableGraph
+  controller: App\Controller\ReportController::variableGraphAction
+
+backend_admin_report_variablegraph_modalbody:
+  path:     /variableGraphModalBody
+  controller: App\Controller\ReportController::modalBody
+
+backend_admin_report_variablegraph_modalbody_comment:
+  path:     /variableGraphModalBodyComment
+  controller: App\Controller\ReportController::modalBodyComment
+
+
+
+
+
