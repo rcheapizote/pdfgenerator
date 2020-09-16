@@ -1,6 +1,10 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\DefaultController::indexAction
+
+public:
+  path: /public
+  controller: App\Controller\DefaultController::indexAction
 
 
 backend_admin_homepage:
