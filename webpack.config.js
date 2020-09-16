@@ -14,7 +14,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin'); // this line tell to web
         //.setPublicPath('https://my-cool-app.com.global.prod.fastly.net');
         //.setPublicPath('/pdfgenerator/public/build')
 
-        .setPublicPath('http://rcmpdf.mayawork.com/build')
+        .setPublicPath('http://testing.mayawork.com/build')
 
      // guarantee that the keys in manifest.json are *still*
         // prefixed with build/
